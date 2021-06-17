@@ -1,0 +1,40 @@
+#1. Name:
+#      Carlos Lespin
+# 2. Assignment Name:
+#      Lab 06: Sort Design
+# 3. Assignment Description:
+#      This program is meant to open a file determined by the user and sort all the elements
+#      inside that file.        
+# 4. Algorithmic Efficiency
+#      This is code has an efficiency of  O(n^2); because it contains two loops inside each other. Both loops
+#      visit each element in the array.
+# 5. What was the hardest part? Be as specific as possible.
+#      Even though it's a short program, the hardest part was making it all makes sense.
+        I know it defeats the purpose of writing the pseudocode, but I had to code it python first
+        to understand it all better.
+# 6. How long did it take for you to complete the assignment?
+#      2 hours
+
+
+
+#Prepare the file and list that will be used to find the word.
+
+PROMPT user for file_name
+OPEN array_file
+READ element_list as lines from array_file
+
+
+PUT element_list
+
+for i_pivot in range(len(element_list)-1, 0, -1):
+
+    for index in range(i_pivot):
+        if list[index] > list[index + 1]:
+
+            list[index], list[index + 1] = list[index + 1], list[index]
+
+PUT element_list
+
+
+"array": [ "52", "26", "39", "15" ]
+

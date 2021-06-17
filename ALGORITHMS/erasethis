@@ -1,0 +1,44 @@
+def user_login()
+    PROMPT user for username
+    PROMPT user for password
+
+    OPEN username_directory
+    READ stored_usernames as lines from username_directory
+
+    FOR stored_username in stored_usernames
+        IF username == stored_username
+            
+            index_position <- stored_username index position
+
+            OPEN password_directory
+            READ stored_passwords as lines of password_directory
+
+            IF password == stored_password at index_position
+                login <- True   
+    RETURN login
+
+def create_login()
+    PROMPT user for username
+    PROMPT user for password
+    
+    OPEN username_directory
+    WRITE username in username_directory
+    OPEN password_directory
+    WRITE password in password_directory
+
+    RETURN user_login()
+
+PROMPT user if they have a login
+
+IF user has login
+    login <- user_login 
+ELSE
+    login <- create_login()
+
+IF login == True
+    PUT('You are authenticated')
+ELSE
+    PUT('Invalid credentials')
+    
+        
+    
