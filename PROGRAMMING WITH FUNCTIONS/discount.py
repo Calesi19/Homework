@@ -47,6 +47,8 @@ while repeat.lower() == 'no':
 print('Ok, goodbye.')
 closing_prompt = input('')
 
+print('hello')
+
 
 
 
