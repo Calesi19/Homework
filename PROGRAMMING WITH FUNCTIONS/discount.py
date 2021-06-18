@@ -48,6 +48,7 @@ print('Ok, goodbye.')
 closing_prompt = input('')
 
 print('hello')
+print('hello')
 
 
 
